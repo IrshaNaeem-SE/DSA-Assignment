@@ -1,12 +1,19 @@
 public class OneDArray {
     public static void main(String[] args) {
 
-        int[] arr = {10, 20, 30, 40, 50};
+        int[] arr = new int[10];
+
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+        arr[3] = 40;
+        arr[4] = 50;
+
         int n = 5;
         int i = 0;
 
         // 1. Traversal
-        System.out.println("Array elements:");
+        System.out.print("Original Array: ");
         while (i < n) {
             System.out.print(arr[i] + " ");
             i++;
@@ -25,15 +32,15 @@ public class OneDArray {
         arr[position] = value;
         n++;
 
-        System.out.println("\nAfter insertion:");
+        System.out.print("\nAfter Insertion: ");
         i = 0;
         while (i < n) {
             System.out.print(arr[i] + " ");
             i++;
         }
 
-        // 3. Deletion at index 2
-        position = 2;
+        // 3. Deletion at index 3
+        position = 3;
 
         i = position;
         while (i < n - 1) {
@@ -43,17 +50,17 @@ public class OneDArray {
 
         n--;
 
-        System.out.println("\nAfter deletion:");
+        System.out.print("\nAfter Deletion: ");
         i = 0;
         while (i < n) {
             System.out.print(arr[i] + " ");
             i++;
         }
 
-        // 4. Searching
+        // 4. Searching for 40
         int search = 40;
-        i = 0;
         int found = -1;
+        i = 0;
 
         while (i < n) {
             if (arr[i] == search) {
@@ -64,16 +71,16 @@ public class OneDArray {
         }
 
         if (found != -1) {
-            System.out.println("\nElement found at index: " + found);
+            System.out.println("\n40 found at index: " + found);
         } else {
-            System.out.println("\nElement not found");
+            System.out.println("\n40 not found");
         }
 
-        // 5. Updating
+        // 5. Updating index 1
         position = 1;
         arr[position] = 99;
 
-        System.out.println("After updating:");
+        System.out.print("After Updating: ");
         i = 0;
         while (i < n) {
             System.out.print(arr[i] + " ");
@@ -81,4 +88,5 @@ public class OneDArray {
         }
     }
 }
+
 
